@@ -1,5 +1,5 @@
 hooks:
     pre-restart:
-        - pre.sh
+        - ./pre.sh
     post-restart:
-        - pos.sh
+        - ./pos.sh
