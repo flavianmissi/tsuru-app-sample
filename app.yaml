@@ -1,0 +1,5 @@
+hooks:
+    pre-restart:
+        - pre.sh
+    post-restart:
+        - pos.sh
