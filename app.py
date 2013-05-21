@@ -14,7 +14,7 @@ def index():
     return "Hello world!"
 
 
-@app.route("db")
+@app.route("/db")
 def test_connection():
     try:
         db = connect(host=mysql_host, user=mysql_user,
