@@ -26,6 +26,7 @@ def test_connection():
         db = connect(host=mysql_host, user=mysql_user,
                      passwd=mysql_password, db=mysql_db_name)
         msg = "Successfuly connect into database"
+        db.close()
     except Exception as e:
         msg = "Got error while connecting with database"
     return msg
