@@ -15,7 +15,7 @@ def index():
 
 @app.route("/units")
 def units():
-    content += "<h1>host is: {0}</h1>".format(subprocess.check_output("hostname"))
+    content = "<h1>host is: {0}</h1>".format(subprocess.check_output("hostname"))
     return content
 
 
