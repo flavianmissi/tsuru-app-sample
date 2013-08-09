@@ -1,6 +1,7 @@
 import os
-from flask import Flask
+import subprocess
 from MySQLdb import connect
+from flask import Flask
 
 app = Flask(__name__)
 mysql_host = os.environ.get("MYSQL_HOST")
