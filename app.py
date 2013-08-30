@@ -12,7 +12,7 @@ mysql_db_name = os.environ.get("MYSQL_DATABASE_NAME")
 
 @app.route("/")
 def index():
-    return "Hello world!"
+    return "Hello big review!"
 
 @app.route("/units")
 def units():
