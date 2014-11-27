@@ -14,10 +14,16 @@ mysql_db_name = os.environ.get("MYSQL_DATABASE_NAME")
 def index():
     return "Hello review"
 
+
 @app.route("/units")
 def units():
     content = "<h1>host is: {0}</h1>".format(subprocess.check_output("hostname"))
     return content
+
+
+@app.route("/envs")
+def envs():
+    return "\n".join(os.environ)
 
 
 @app.route("/db")
@@ -27,7 +33,7 @@ def test_connection():
                      passwd=mysql_password, db=mysql_db_name)
         msg = "Successfuly connect into database"
         db.close()
-    except Exception as e:
+    except Exception:
         msg = "Got error while connecting with database"
     msg += "<h1>host is: {0}</h1>".format(subprocess.check_output("hostname"))
     return msg
