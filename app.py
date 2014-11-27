@@ -23,7 +23,10 @@ def units():
 
 @app.route("/envs")
 def envs():
-    return "<br />".join(os.environ.items())
+    response = ""
+    for env, value in os.environ.items():
+        response = "{}<b>{}</b> = {} <br />".format(response, env, value)
+    return response
 
 
 @app.route("/db")
@@ -40,4 +43,5 @@ def test_connection():
 
 
 if __name__ == "__main__":
+    app.debug = True
     app.run()
