@@ -23,7 +23,7 @@ def units():
 
 @app.route("/envs")
 def envs():
-    return "\n".join(os.environ)
+    return "<br />".join(os.environ)
 
 
 @app.route("/db")
